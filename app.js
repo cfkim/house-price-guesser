@@ -10,7 +10,57 @@ const answerD = document.getElementById('4')
     // correct answer
     let answer
     let points = 0
-
+const category = localStorage.getItem('category')
+let url
+if (category == 'Any Category'){
+    url = "https://opentdb.com/api.php?amount=10&category=11&difficulty=medium&type=multiple"
+}else if(category == 'General Knowledge'){
+    url = "https://opentdb.com/api.php?amount=10&category=9&type=multiple"
+}else if(category == 'Entertainment: Books'){
+    url = "https://opentdb.com/api.php?amount=10&category=10&type=multiple"
+}else if(category == 'Entertainment: Board Games'){
+    url = "https://opentdb.com/api.php?amount=10&category=16&type=multiple"
+}else if(category == 'Entertainment: Cartoon & Animation'){
+    url = "https://opentdb.com/api.php?amount=10&category=32&type=multiple"
+}else if(category == 'Entertainment: Comics'){
+    url = "https://opentdb.com/api.php?amount=10&category=29&type=multiple"
+}else if(category == 'Entertainment: Film'){
+    url = "https://opentdb.com/api.php?amount=10&category=11&type=multiple"
+}else if(category == 'Entertainment: Japanese Anime & Manga'){
+    url = "https://opentdb.com/api.php?amount=10&category=31&type=multiple"
+}else if(category == 'Entertainment: Music'){
+    url = "https://opentdb.com/api.php?amount=10&category=12&type=multiple"
+}else if(category == 'Entertainment: Musicals & Theatres'){
+    url = "https://opentdb.com/api.php?amount=10&category=13&type=multiple"
+}else if(category == 'Entertainment: Television'){
+    url = "https://opentdb.com/api.php?amount=10&category=14&type=multiple"
+}else if(category == 'Entertainment: Video Games'){
+    url = "https://opentdb.com/api.php?amount=10&category=15&type=multiple"
+}else if(category == 'Science & Nature'){
+    url = "https://opentdb.com/api.php?amount=10&category=17&type=multiple"
+}else if(category == 'Science: Computers'){
+    url = "https://opentdb.com/api.php?amount=10&category=18&type=multiple"
+}else if(category == 'Science: Gadgets'){
+    url = "https://opentdb.com/api.php?amount=10&category=30&type=multiple"
+}else if(category == 'Science: Mathematics'){
+    url = "https://opentdb.com/api.php?amount=10&category=19&type=multiple"
+}else if(category == 'Mythology'){
+    url = "https://opentdb.com/api.php?amount=10&category=20&type=multiple"
+}else if(category == 'Sports'){
+    url = "https://opentdb.com/api.php?amount=10&category=21&type=multiple"
+}else if(category == 'Geography'){
+    url = "https://opentdb.com/api.php?amount=10&category=22&type=multiple"
+}else if(category == 'History'){
+    url = "https://opentdb.com/api.php?amount=10&category=23&type=multiple"
+}else if(category == 'Politics'){
+    url = "https://opentdb.com/api.php?amount=10&category=24&type=multiple"
+}else if(category == 'Art'){
+    url = "https://opentdb.com/api.php?amount=10&category=25&type=multiple"
+}else if(category == 'Celebrities'){
+    url = "https://opentdb.com/api.php?amount=10&category=26&type=multiple"
+}else if(category == 'Animals'){
+    url = "https://opentdb.com/api.php?amount=10&category=27&type=multiple"
+}
 let q_num = 0
 answerA.addEventListener('click', () => {
     console.log(answerA.innerHTML)
@@ -113,7 +163,6 @@ async function initializeQuiz() {
 async function getQuestion(){
 
     // API call to trivia
-    var url = "https://opentdb.com/api.php?amount=10&category=11&difficulty=medium&type=multiple"
     let response = await fetch(url)
     
     console.log(response)
