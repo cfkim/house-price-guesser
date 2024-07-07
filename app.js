@@ -68,7 +68,7 @@ answerA.addEventListener('click', () => {
         answerA.parentElement.classList.add('correct')
         console.log("success")
         points += 10
-        score.innerHTML = `Current score: ${points}`
+        score.innerHTML = `Score: ${points}`
         q_num += 1
         setTimeout(() => {
             answerA.parentElement.classList.remove('correct')
@@ -91,7 +91,7 @@ answerB.addEventListener('click', () => {
         answerB.parentElement.classList.add('correct')
         console.log("success")
         points += 10
-        score.innerHTML = `Current score: ${points}`
+        score.innerHTML = `Score: ${points}`
         q_num += 1
         setTimeout(() => {
             answerB.parentElement.classList.remove('correct')
@@ -114,7 +114,7 @@ answerC.addEventListener('click', () => {
         answerC.parentElement.classList.add('correct')
         console.log("success")
         points += 10
-        score.innerHTML = `Current score: ${points}`
+        score.innerHTML = `Score: ${points}`
         q_num += 1
         setTimeout(() => {
             answerC.parentElement.classList.remove('correct')
@@ -136,7 +136,7 @@ answerD.addEventListener('click', () => {
         answerD.parentElement.classList.add("correct")
         console.log("success")
         points += 10
-        score.innerHTML = `Current score: ${points}`
+        score.innerHTML = `Score: ${points}`
         q_num += 1
         setTimeout(() => {
             answerD.parentElement.classList.remove("correct")
