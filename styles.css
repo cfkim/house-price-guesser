@@ -115,14 +115,6 @@ h2 {
     width: 50%;
 }
 
-.main__question {
-    width: 100%; /* Ensure it takes the full width of its parent */
-    min-height: 20rem; /* Adjust based on your design */
-    margin-bottom: 2rem; /* Space below the question container */
-    padding: 1rem; /* Padding for better readability */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    overflow: auto; /* Handle overflow if content exceeds the height */
-}
 .choice__container {
     display: flex;
     margin-bottom: 0.8rem;
